@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable name="movie_data" type="com.example.moviedatabaseapp.model.ResultsItem"/>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/movie_detail_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/moview_iv"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="5dp"
+            android:contentDescription="@string/movie_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:singleLine="false"
+            android:text="@{movie_data.title}"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/release_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{movie_data.releaseDate}"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/popularity_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`Popularity: ` +movie_data.popularity.toString()}"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/votes_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`Votes: ` +movie_data.voteCount.toString()}"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/language_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{`Language: ` +movie_data.originalLanguage}"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/overview_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@{movie_data.overview}"
+            android:gravity="center_horizontal"
+            android:singleLine="false"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</layout>
